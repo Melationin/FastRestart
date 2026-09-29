@@ -39,12 +39,8 @@ repositories {
     mavenCentral()
 }
 
-// 文件名必须与 fabric.mod.json 里声明的一致：loom 按该名字把它复制进 jar。
-def awFile = sc.process(rootProject.file("src/main/resources/fastrestart.classtweaker"),
-        ".gradle/aw/fastrestart.classtweaker")
 
 loom {
-    accessWidenerPath = awFile
 
     mods {
         "fastrestart" {
