@@ -1,0 +1,40 @@
+pluginManagement {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven { url = "https://api.modrinth.com/maven" }
+        maven {
+            name = "KikuGie Releases"
+            url = "https://maven.kikugie.dev/releases"
+        }
+        maven {
+            name = "KikuGie Snapshots"
+            url = "https://maven.kikugie.dev/snapshots"
+        }
+        mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id("dev.kikugie.stonecutter") version "0.9.7"
+}
+
+stonecutter {
+    kotlinController = false
+    centralScript = "build.gradle"
+    create(getRootProject()) {
+        // 目前只维护 26.1 一个节点；新增版本时在这里加版本号，并在 versions/<版本>/ 放 gradle.properties。
+        versions "26.1"
+        vcsVersion = "26.1"
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "fastrestart",
+  "version": "${modVer}",
+
+  "name": "FastRestart",
+  "description": "Restart a dedicated server in the same JVM without reloading mods",
+  "authors": [
+    "Melationin"
+  ],
+  "contact": {
+    "sources": "https://github.com/Melationin/FastRestart"
+  },
+
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+    ]
+  },
+  "mixins": [
+    "fastrestart.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${minecraftVer}",
+    "fabricloader": ">=0.19.2"
+  }
+}

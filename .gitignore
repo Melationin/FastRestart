@@ -1,0 +1,37 @@
+# gradle
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+*.launch
+
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macos
+*.DS_Store
+
+# fabric
+run/
+run-e2e/
+
+# java
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# 本地 agent 说明，不纳入版本控制
+AGENT.MD
